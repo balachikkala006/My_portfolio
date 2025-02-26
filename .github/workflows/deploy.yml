@@ -3,7 +3,7 @@ name: Deploy Portfolio Website
 on:
   push:
     branches:
-      - main  # Runs when changes are pushed to the main branch
+      - main  # Trigger deployment on main branch push
 
 jobs:
   deploy:
@@ -12,9 +12,10 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-      
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # The branch to deploy to
+          branch: gh-pages  # The branch where GitHub Pages is deployed
           folder: .  # Deploy from the root folder
+          token: ${{ secrets.GH_PAT }}  # Use the stored GitHub Secret
