@@ -13,9 +13,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Build Project
+        run: |
+          npm install  # If using a Node.js-based project
+          npm run build  # Adjust based on your framework (React, Next.js, Vue, etc.)
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages  # The branch where GitHub Pages is deployed
-          folder: .  # Deploy from the root folder
-          token: ${{ secrets.GH_PAT }}  # Use the stored GitHub Secret
+          folder: build  # Change this to your actual output folder (e.g., 'dist', 'public')
+          token: ${{ secrets.GH_PATH }}  # Use GitHub's default token
