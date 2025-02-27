@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if(query.toLowerCase() === 'Bala Naryana Subbarao Chikkala') {
             window.location.href = 'search-results.html';
         } else {
-            alert('Please type "Bala Narayana Subbarao Chikkala" to see the portfolio.');
+            alert("Please type 'Bala Narayana Subbarao Chikkala' to see the portfolio.");
+            
+
         }
     });
 
