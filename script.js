@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var searchBar = document.getElementById('search-bar');
 
     searchButton.addEventListener('click', function() {
-        var query = searchBar.value.trim();
-        if(query.toLowerCase() === 'Bala Naryana Subbarao Chikkala') {
+        var query = searchBar.value.trim().toLowerCase(); // Convert input to lowercase
+        var expectedQuery = 'bala narayana subbarao chikkala'; // Corrected spelling & lowercase
+
+        if (query === expectedQuery) {
             window.location.href = 'search-results.html';
         } else {
             alert("Please type 'Bala Narayana Subbarao Chikkala' to see the portfolio.");
-            
-
         }
     });
 
