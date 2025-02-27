@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchButton.addEventListener('click', function() {
         var query = searchBar.value.trim().toLowerCase(); // Convert input to lowercase
-        var expectedQuery = 'bala narayana subbarao chikkala'; // Corrected spelling & lowercase
+        var expectedQuery = 'bala narayana subbarao chikkala'; // Corrected expected text
 
         if (query === expectedQuery) {
             window.location.href = 'search-results.html';
